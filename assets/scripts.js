@@ -20,3 +20,10 @@ function toggleTheme() {
       document.documentElement.classList.add('dark');
     }
   });
+
+  const menuBtn = document.getElementById('menu-btn');
+  const menu = document.getElementById('menu');
+
+  menuBtn.addEventListener('click', () => {
+    menu.classList.toggle('hidden'); // Alterna a classe 'hidden' para mostrar/esconder o menu
+  });
