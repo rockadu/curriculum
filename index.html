@@ -11,6 +11,7 @@
 </head>
 
 <body class="bg-gray-100 dark:bg-gray-950 flex flex-col">
+    <!-- NAVBAR -->
     <div class="fixed inset-x-0 top-0 z-10 bg-white dark:bg-gray-950 backdrop-blur-sm bg-opacity-80 border-b border-black/5 dark:border-white/10">
         <div class="bg-white dark:bg-gray-950">
             <div class="flex h-14 items-center justify-between gap-8 px-4 sm:px-6">
@@ -18,7 +19,7 @@
                     <h3 class="text-xl dark:text-white font-bold">Carlos Assis</h3>
                 </div>
                 <div class="flex items-center gap-6 max-md:hidden">
-                    <a class="text-sm/6 text-gray-950 dark:text-white" href="/docs">Curriculum</a>
+                    <a class="text-sm/6 text-gray-950 dark:text-white" href="/curriculum">Curriculum</a>
                     <a class="text-sm/6 text-gray-950 dark:text-white" href="/blog">Blog</a>
                     <a aria-label="GitHub repository" href="https://github.com/rockadu" target="_blank">
                         <svg viewBox="0 0 20 20" class="size-5 fill-black/40 dark:fill-gray-400">
@@ -40,6 +41,9 @@
             </div>
         </div>
     </div>
+    <!-- /NAVBAR -->
+
+    <!-- PRINCIPAL -->
     <div class="min-w-screen h-lvh py-2 flex flex-col place-content-center place-items-center py-auto">
         <button onclick="toggleTheme()" class="w-24 bg-gray-200 dark:bg-gray-700 p-2 rounded-lg focus:outline-none">
             <span class="text-sm dark:text-white">🌙/☀️</span>
@@ -47,6 +51,8 @@
         <h1 class="text-4xl dark:text-white font-bold text-gra">Working on it!</h1>
         <h6 class="text-sm dark:text-white my-3">soon...</h6>
     </div>
+    <!-- /PRINCIPAL -->
+
     <div class="hidden fixed inset-0 bg-white focus:outline-none md:hidden dark:bg-gray-950" id="menu-mobile" role="dialog" tabindex="-1" aria-modal="true" data-headlessui-state="open" data-open="">
         <div class="size-full overflow-y-auto" id="headlessui-dialog-panel-:r7:" data-headlessui-state="open" data-open="">
             <div class="flex h-14 items-center justify-between px-4 py-4 sm:px-6">
@@ -58,9 +64,10 @@
                 </button>
             </div>
             <div class="grid grid-cols-1 gap-1 px-1 pb-1 sm:px-3 sm:pb-3">
-                <a class="rounded-lg px-3 py-2 text-xl/9 font-medium text-gray-950 data-active:bg-gray-950/5 dark:text-white dark:hover:bg-white/10" href="https://tailwindui.com/?ref=top">Curriculum</a>
+                <a class="rounded-lg px-3 py-2 text-xl/9 font-medium text-gray-950 data-active:bg-gray-950/5 dark:text-white dark:hover:bg-white/10" href="/curriculum">Curriculum</a>
                 <a class="rounded-lg px-3 py-2 text-xl/9 font-medium text-gray-950 data-active:bg-gray-950/5 dark:text-white dark:hover:bg-white/10" href="/blog">Blog</a>
-                <a class="rounded-lg px-3 py-2 text-xl/9 font-medium text-gray-950 data-active:bg-gray-950/5 dark:text-white dark:hover:bg-white/10" href="https://github.com/tailwindlabs/tailwindcss">GitHub</a></div></div></div>
+                <a class="rounded-lg px-3 py-2 text-xl/9 font-medium text-gray-950 data-active:bg-gray-950/5 dark:text-white dark:hover:bg-white/10" href="https://github.com/rockadu" target="_blank">GitHub</a></div></div>
+    </div>
 </body>
 <script src="assets/scripts.js"></script>
 
