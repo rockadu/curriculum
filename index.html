@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="assets/style.css">
 </head>
 
-<body class="bg-gray-100 dark:bg-gray-950 flex flex-col">
+<body class="bg-white dark:bg-gray-950 flex flex-col">
     <!-- NAVBAR -->
     <div
         class="fixed inset-x-0 top-0 z-10 bg-white dark:bg-gray-950 backdrop-blur-sm bg-opacity-80 border-b border-black/5 dark:border-white/10">
@@ -20,11 +20,12 @@
                     <h3 class="text-xl dark:text-white font-bold">Carlos Assis</h3>
                 </div>
                 <div>
-                    
                 </div>
                 <div class="flex items-center gap-6">
-                    <div class="relative w-12 h-6 flex items-center bg-gray-300 dark:bg-gray-700 rounded-full cursor-pointer transition-all" onclick="toggleTheme()">
-                        <div id="themeIndicator" class="w-7 h-6 bg-transparent rounded-full transform transition-transform duration-300 dark:translate-x-[25px]">
+                    <div class="relative w-12 h-6 flex items-center bg-gray-300 dark:bg-gray-700 rounded-full cursor-pointer transition-all"
+                        onclick="toggleTheme()">
+                        <div id="themeIndicator"
+                            class="w-7 h-6 bg-transparent rounded-full transform transition-transform duration-300 dark:translate-x-[25px]">
                             <span id="sunIcon" class="absolute text-yellow-500 dark:hidden">☀️</span>
                             <span id="moonIcon" class="absolute hidden dark:block">🌙</span>
                         </div>
@@ -53,28 +54,35 @@
                         </button>
                     </div>
                 </div>
-                
             </div>
         </div>
     </div>
     <!-- /NAVBAR -->
 
     <!-- PRINCIPAL -->
-    <div class="container mt-10 pt-16">
+    <!-- Adicionamos "container mx-auto" para centralizar horizontalmente o conteúdo -->
+    <div class="container mx-auto mt-10 pt-16">
         <!-- SEÇÃO FOTO E NOME -->
-        <div class="flex flex-col gap-2 p-8 sm:flex-row sm:items-center sm:gap-6 sm:py-4 ...">
+        <div
+            class="flex flex-col gap-2 bg-white dark:bg-gray-800 rounded-lg p-8 sm:flex-row sm:items-center sm:gap-6 sm:py-4 shadow-md ring-1 ring-gray-200 dark:ring-gray-400">
             <img class="mx-auto block h-24 rounded-full sm:mx-0 sm:shrink-0" src="assets/img/Cadu.jpg" alt="" />
             <div class="space-y-2 text-center sm:text-left">
-              <div class="space-y-0.5">
-                <p class="text-lg font-semibold text-black">Carlos Assis</p>
-                <p class="font-medium text-gray-500">Especialista em Engenharia de Software</p>
-              </div>
-              <button class="border-purple-200 text-green-600 hover:border-transparent hover:bg-green-600 hover:text-white active:bg-purple-green
-              ">
-                Whatsapp
-              </button>
+                <div class="space-y-0.5">
+                    <p class="text-lg font-semibold text-black dark:text-white">Carlos Assis</p>
+                    <p class="font-medium text-gray-500 dark:text-gray-300">Especialista em Engenharia de Software</p>
+                </div>
+                <div class="flex gap-2">
+                    <a href="https://wa.me/5541991767058" target="_blank"
+                        class="ring-1 ring-green-500 rounded-full text-green-600 px-2 hover:bg-green-500 hover:text-white">
+                        Whatsapp
+                    </a>
+                    <a href="mailto:rockadu@hotmail.com" target="_blank"
+                        class="ring-1 ring-blue-500 rounded-full text-blue-600 px-2 hover:bg-blue-500 hover:text-white">
+                        Email
+                    </a>
+                </div>
             </div>
-          </div>
+        </div>
     </div>
     <!-- /PRINCIPAL -->
 
@@ -84,7 +92,7 @@
             data-open="">
             <div class="flex h-14 items-center justify-between px-4 py-4 sm:px-6">
                 <button type="button"
-                    class="relative inline-grid size-7 place-items-center rounded-md text-gray-950 hover:bg-gray-950/5 dark:text-white dark:hover:bg-white/10 undefined"
+                    class="relative inline-grid size-7 place-items-center rounded-md text-gray-950 hover:bg-gray-950/5 dark:text-white dark:hover:bg-white/10"
                     aria-label="Navigation">
                     <span class="absolute top-1/2 left-1/2 size-11 -translate-1/2 [@media(pointer:fine)]:hidden"></span>
                     <svg viewBox="0 0 16 16" fill="currentColor" class="size-4">
