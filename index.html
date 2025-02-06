@@ -6,14 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hello World</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap">
     <link rel="stylesheet" href="assets/style.css">
 </head>
 
-<body class="bg-white dark:bg-gray-950 flex flex-col">
+<body class="bg-white dark:bg-gray-950 flex flex-col lang-pt">
     <!-- NAVBAR -->
-    <div
-        class="fixed inset-x-0 top-0 z-10 bg-white dark:bg-gray-950 backdrop-blur-sm bg-opacity-80 border-b border-black/5 dark:border-white/10">
+    <div class="fixed inset-x-0 top-0 z-10 bg-white dark:bg-gray-950 backdrop-blur-sm bg-opacity-80 border-b border-black/5 dark:border-white/10">
         <div class="bg-white dark:bg-gray-950">
             <div class="flex h-14 items-center justify-between gap-8 px-4 sm:px-6">
                 <div class="flex gap-4">
@@ -22,6 +21,24 @@
                 <div>
                 </div>
                 <div class="flex items-center gap-6">
+                    <div class="relative inline-block text-left cursor-pointer hover:dark:bg-gray-900 hover:bg-gray-200 rounded-xl p-2">
+                        <div id="language-button" class="flex" onclick="toggleLanguageMenu(event)">
+                          <div class="dark:text-white pt">PT-BR</div>
+                          <div class="hidden dark:text-white en">EN-US</div>
+                          <svg class="size-5 text-gray-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon">
+                            <path fill-rule="evenodd"
+                              d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z"
+                              clip-rule="evenodd" />
+                          </svg>
+                        </div>
+                        <div id="language-menu" class="hidden absolute right-0 z-10 mt-2 w-56 origin-top-right rounded-xl bg-white ring-1 shadow-lg ring-black/5 focus:outline-hidden"
+                          role="menu" aria-orientation="vertical" aria-labelledby="menu-button" tabindex="-1">
+                          <div class="py-1" role="none">
+                            <a href="#" class="block px-4 py-2 text-sm text-gray-700" tabindex="-1" onclick="toggleLanguageSite('pt')">PT-BR</a>
+                            <a href="#" class="block px-4 py-2 text-sm text-gray-700" tabindex="-1" onclick="toggleLanguageSite('en')">EN-US</a>
+                          </div>
+                        </div>
+                    </div>
                     <div class="relative w-12 h-6 flex items-center bg-gray-300 dark:bg-gray-700 rounded-full cursor-pointer transition-all"
                         onclick="toggleTheme()">
                         <div id="themeIndicator"
@@ -31,7 +48,8 @@
                         </div>
                     </div>
                     <div class="flex items-center gap-6 max-md:hidden">
-                        <a class="text-sm/6 text-gray-950 dark:text-white" href="/curriculum">Curriculum</a>
+                        <a class="text-sm/6 text-gray-950 dark:text-white pt" href="/curriculum">Curriculum</a>
+                        <a class="text-sm/6 text-gray-950 dark:text-white en" href="/curriculum">Resume</a>
                         <a class="text-sm/6 text-gray-950 dark:text-white" href="/blog">Blog</a>
                         <a aria-label="GitHub repository" href="https://github.com/rockadu" target="_blank">
                             <svg viewBox="0 0 20 20" class="size-5 fill-black/40 dark:fill-gray-400">
@@ -64,12 +82,13 @@
     <div class="container mx-auto mt-10 pt-16">
         <!-- SEÇÃO FOTO E NOME -->
         <div
-            class="flex flex-col gap-2 bg-white dark:bg-gray-800 rounded-lg p-8 sm:flex-row sm:items-center sm:gap-6 sm:py-4 shadow-md ring-1 ring-gray-200 dark:ring-gray-400">
+            class="flex flex-col gap-2 bg-white dark:bg-gray-800 rounded-xl p-8 sm:flex-row sm:items-center sm:gap-6 sm:py-4 shadow-md ring-1 ring-gray-200 dark:ring-gray-400">
             <img class="mx-auto block h-24 rounded-full sm:mx-0 sm:shrink-0" src="assets/img/Cadu.jpg" alt="" />
             <div class="space-y-2 text-center sm:text-left">
                 <div class="space-y-0.5">
                     <p class="text-lg font-semibold text-black dark:text-white">Carlos Assis</p>
-                    <p class="font-medium text-gray-500 dark:text-gray-300">Especialista em Engenharia de Software</p>
+                    <p class="font-medium text-gray-500 dark:text-gray-300 pt">Especialista em Engenharia de Software</p>
+                    <p class="hidden font-medium text-gray-500 dark:text-gray-300 en">Software Engineering Specialist</p>
                 </div>
                 <div class="flex gap-2">
                     <a href="https://wa.me/5541991767058" target="_blank"
@@ -78,8 +97,21 @@
                     </a>
                     <a href="mailto:rockadu@hotmail.com" target="_blank"
                         class="ring-1 ring-blue-500 rounded-full text-blue-600 px-2 hover:bg-blue-500 hover:text-white">
-                        Email
+                        <span class="pt">E-mail</span>
+                        <span class="en">Email</span>
                     </a>
+                </div>
+            </div>
+        </div>
+
+        <div
+            class="flex flex-col mt-5 bg-white dark:bg-gray-800 rounded-xl p-8 sm:flex-row sm:items-center sm:gap-6 sm:py-4 shadow-md ring-1 ring-gray-200 dark:ring-gray-400">
+            <div class="space-y-2 text-center sm:text-left">
+                <div class="space-y-0.5">
+                    <p class="text-lg font-semibold text-black dark:text-white pt">Sobre</p>
+                    <p class="text-lg font-semibold text-black dark:text-white en">About</p>
+                    <p class="text-gray-500 dark:text-gray-300 pt">Olá, sou o Cadu! Sou desenvolvedor a um pouco mais de 6 anos, desde criança sou apaixonado por computação, então trabalhar com isso todos os dias é diversão.</p>
+                    <p class="text-gray-500 dark:text-gray-300 en">Hello, I'm Cadu! I've been a developer for just over six years, and I've been passionate about computing since I was a child, so working with it every day is fun.</p>
                 </div>
             </div>
         </div>
