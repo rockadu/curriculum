@@ -24,3 +24,35 @@ function toggleMobileMenu() {
   const menu = document.getElementById('menu-mobile');
   menu.classList.toggle('hidden');
 }
+
+function toggleLanguageMenu(event) {
+  event.stopPropagation();
+  const menu = document.getElementById('language-menu');
+  menu.classList.toggle('hidden');
+}
+
+document.addEventListener('click', function(event) {
+  const menu = document.getElementById('language-menu');
+  const button = document.getElementById('language-button');
+  
+  if (!menu.classList.contains('hidden') &&
+      !menu.contains(event.target) &&
+      !button.contains(event.target)) {
+    menu.classList.add('hidden');
+  }
+});
+
+function toggleLanguageSite(lang){
+  if(lang === "pt"){
+  document.body.classList.remove('lang-en');
+  document.body.classList.add('lang-pt');
+  }
+
+  else if(lang === "en"){
+    document.body.classList.remove('lang-pt');
+    document.body.classList.add('lang-en');
+  }
+
+  const menu = document.getElementById('language-menu');
+  menu.classList.add('hidden');
+}

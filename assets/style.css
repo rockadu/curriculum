@@ -1,3 +1,12 @@
 body {
     font-family: 'Noto Sans', sans-serif;
 }
+
+.en { display: none; }
+.pt { display: block; }
+
+.lang-en .en { display: block; }
+.lang-en .pt { display: none; }
+
+.lang-pt .pt { display: block; }
+.lang-pt .en { display: none; }
