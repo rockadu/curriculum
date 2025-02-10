@@ -20,6 +20,10 @@ if (localStorage.getItem("theme") === "dark") {
   document.documentElement.classList.add("dark");
 }
 
+if (localStorage.getItem("lang") != undefined) {
+  toggleLanguageSite(localStorage.getItem("lang"));
+}
+
 function toggleMobileMenu() {
   const menu = document.getElementById('menu-mobile');
   menu.classList.toggle('hidden');
@@ -43,9 +47,12 @@ document.addEventListener('click', function(event) {
 });
 
 function toggleLanguageSite(lang){
+  const html = document.documentElement;
+  localStorage.setItem("lang", lang);
+
   if(lang === "pt"){
-  document.body.classList.remove('lang-en');
-  document.body.classList.add('lang-pt');
+    document.body.classList.remove('lang-en');
+    document.body.classList.add('lang-pt');
   }
 
   else if(lang === "en"){
